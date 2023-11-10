@@ -16,8 +16,8 @@ public class Program3 {
             else if(str.charAt(i)==')'){
                 ind--;
             }
-            else if(str.charAt(i)=='+'||str.charAt(i)=='-'||str.charAt(i)=='*'||str.charAt(i)=='/'){
-                if((str.charAt(i-1)>=97 &&str.charAt(i-1)<=122)||(str.charAt(i+1)>=97 &&str.charAt(i+1)<=122)){
+            else if(i>0&&str.charAt(i)=='+'||str.charAt(i)=='-'||str.charAt(i)=='*'||str.charAt(i)=='/'){
+                if((str.charAt(i-1)>=97 &&str.charAt(i-1)<=122)||(i<str.length()-1&&str.charAt(i+1)>=97 &&str.charAt(i+1)<=122)){
                     continue;
                 }
                 else{
