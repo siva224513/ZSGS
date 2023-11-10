@@ -27,4 +27,26 @@ public class Program5 {
         Arrays.sort(chars);
         return new String(chars);
     }
+    /*public static String sort(String s) {
+        int n = s.length();
+        StringBuilder sb = new StringBuilder();
+        int freq[] = new int[26];
+    
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            freq[c - 'A']++;
+        }
+    
+        int rev = 25;
+        for (int i = 0; i < 26; i++) {
+            while (freq[rev] != 0) {
+                sb.append((char) (rev + 'A'));
+                freq[rev]--;  // Decrement the frequency after appending the character
+            }
+            rev--;
+        }
+    
+        return sb.toString();
+    }
+    */
 }
