@@ -46,4 +46,39 @@ public class Program1 {
             System.out.println();
         }
     }
+   /*Adding this solution on 11/11/23 - saturday
+
+       while(top<=down && left<=right){
+          for(int i=top;i<=down;i++){
+              arr[i][left+i]=value++;
+          }
+          left++;
+          down--;
+          for(int i=down;i>=top;i--){
+             arr[i][right]=value++;
+          }
+          right--;
+          for(int i=right;i>=left;i--){
+            if(left==i && top!=0){
+                break;
+            }
+             arr[top][i]=value++;
+          }
+         top++;
+         down--;
+
+
+        for (int i = 0; i < arr.length; i++) {
+         for (int j = 0; j < arr[i].length; j++) {
+             if (arr[i][j] != 0) {
+            System.out.printf("%3d", arr[i][j]);
+               } else {
+            System.out.print("   ");
+             }
+            }
+           System.out.println();
+         }
+    }
+    * 
+    */
 }
