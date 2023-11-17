@@ -18,6 +18,7 @@ public class Program5 {
             str[i]=sort(str[i]);
         }
         Arrays.sort(str);
+        System.out.println("Lexicographically largest string:\n");
         for(int i=n-1;i>=0;i--){
             System.out.println(str[i]);
         }
