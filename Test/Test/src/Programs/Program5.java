@@ -22,12 +22,12 @@ public class Program5 {
             System.out.println(str[i]);
         }
     }
-    public static String sort(String s){
-        char[] chars = s.toCharArray();
-        Arrays.sort(chars);
-        return new String(chars);
-    }
-    /*public static String sort(String s) {
+    // public static String sort(String s){
+    //     char[] chars = s.toCharArray();
+    //     Arrays.sort(chars);
+    //     return new String(chars);
+    // }
+    public static String sort(String s) {
         int n = s.length();
         StringBuilder sb = new StringBuilder();
         int freq[] = new int[26];
@@ -41,12 +41,12 @@ public class Program5 {
         for (int i = 0; i < 26; i++) {
             while (freq[rev] != 0) {
                 sb.append((char) (rev + 'A'));
-                freq[rev]--;  // Decrement the frequency after appending the character
+                freq[rev]--;  
             }
             rev--;
         }
     
         return sb.toString();
     }
-    */
+    
 }
