@@ -23,26 +23,24 @@ public class Program5 {
             System.out.println(str[i]);
         }
     }
-    // public static String sort(String s){
-    //     char[] chars = s.toCharArray();
-    //     Arrays.sort(chars);
-    //     return new String(chars);
-    // }
+   
+
+    
     public static String sort(String s) {
         int n = s.length();
         StringBuilder sb = new StringBuilder();
-        int freq[] = new int[26];
+        int freq1[] = new int[26];
     
         for (int i = 0; i < n; i++) {
             char c = s.charAt(i);
-            freq[c - 'A']++;
+            freq1[c - 'A']++;
         }
     
         int rev = 25;
         for (int i = 0; i < 26; i++) {
-            while (freq[rev] != 0) {
+            while (freq1[rev] != 0) {
                 sb.append((char) (rev + 'A'));
-                freq[rev]--;  
+                freq1[rev]--;  
             }
             rev--;
         }

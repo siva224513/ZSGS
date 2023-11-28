@@ -19,10 +19,13 @@ public class Program2 {
         int prev=n%10;
         n/=10;
         int curr=0;
-        while (n>0) {
+        while (n!=0) {
             curr=n%10;
             if((curr+1)!=prev && (curr-1)!=prev){
-                return false;
+                if(curr!=prev)
+                {
+                 return false;
+                }
             }
             n/=10;
             prev=curr;

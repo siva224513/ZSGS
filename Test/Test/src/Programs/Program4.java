@@ -32,10 +32,10 @@ public class Program4 {
         for (char[] row : ch) {
             for (char element : row) {
                 
-                    System.out.print(element +" ");
+                    System.out.print(element +"  ");
                 
             }
-            System.out.println(" ");
+            System.out.println("");
         }
         
         

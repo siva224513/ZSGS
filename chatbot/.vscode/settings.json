@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "chatbot/src/json-simple-1.1.1.jar",
+        "chatbot/lib/json-simple-1.1.1.jar"
+    ]
+}

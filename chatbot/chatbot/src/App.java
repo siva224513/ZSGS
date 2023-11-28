@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileReader;
 import java.util.Map;
 import java.util.Scanner;
@@ -14,7 +15,7 @@ public class App {
 
     public static void main(String[] args) {
         try {
-            String path = "src/courses.json";
+            String path = "D:/ZSGS/chatbot/chatbot/src/courses.json";
             JSONParser parser = new JSONParser();
             JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(path));
             scan = new Scanner(System.in);
@@ -35,7 +36,6 @@ public class App {
         while (!exitMenu) {
             displayCourses(currentMenu);
 
-           
             int userInput = Integer.parseInt(scan.nextLine());
 
             switch (userInput) {

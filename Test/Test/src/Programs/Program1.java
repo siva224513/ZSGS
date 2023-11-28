@@ -8,7 +8,7 @@ public class Program1 {
         int n=scan.nextInt();
       
         int[][] arr = new int[n][n];
-        int value=1;  //count
+        int value=1;  
         int left=0,right=n-1;
         int top=0,down=n-1;
         

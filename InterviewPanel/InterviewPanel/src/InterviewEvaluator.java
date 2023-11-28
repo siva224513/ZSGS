@@ -5,46 +5,46 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class App {
-    private Queue<Person> personQueue;
+public class InterviewEvaluator {
+    private static Queue<Person> personQueue;
     private static Scanner scanner;
 
-    public App() {
+    public InterviewEvaluator() {
         personQueue = new LinkedList<>();
         scanner = new Scanner(System.in);
     }
 
     public static void main(String[] args) {
-        App app = new App();
-        scanner = new Scanner(System.in);
+        InterviewEvaluator app = new InterviewEvaluator();
 
         while (true) {
-            System.out.println("\n1. Add people\n2. Get next person\n3. Start Interview\n4. Exit");
+            System.out.println("\n1. Add people\n2. Get canditate details\n3. Start InterviewEvaluator\n4. Exit");
             System.out.print("Enter your choice: ");
-            String c = scanner.nextLine();
-            
-            try{
-                int choice=Integer.parseInt(c);
-            switch (choice) {
-                case 1:
-                    app.addPersons();
-                    break;
-                case 2:
-                    app.printDetails();
-                    break;
-                case 3:
-                    app.startInterviews();
-                    break;
-                case 4:
-                    System.out.println("Exiting the program.");
-                    System.exit(0);
-                default:
-                    System.out.println("Invalid choice. Please enter 1, 2,3,or 4");
+            String choice = scanner.nextLine();
+
+            try {
+
+                switch (choice) {
+                    case "1":
+                        app.addPersons();
+                        break;
+                    case "2":
+                        app.printDetails();
+                        break;
+                    case "3":
+                        app.startInterviews();
+                        break;
+                    case "4":
+                        System.out.println("Exiting the program.");
+                        System.exit(0);
+
+                    default:
+                        System.out.println("Invalid choice. Please enter 1, 2,3,or 4");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number");
             }
-        }catch(NumberFormatException e){
-            System.out.println("Invalid input. Please enter a number");
-        }
-        
+
         }
     }
 
@@ -54,32 +54,34 @@ public class App {
             return;
         }
         ExecutorService executor = Executors.newSingleThreadExecutor();
+        Scanner sc = new Scanner(System.in);
 
         while (!personQueue.isEmpty()) {
             Person currentCandidate = personQueue.poll();
             System.out.println("Interviewing " + currentCandidate.getName() + "...");
-           Future<?> future= executor.submit(() -> {
+
+            Future<?> future = executor.submit(() -> {
                 long startTime = System.currentTimeMillis();
                 while (System.currentTimeMillis() - startTime < 7000) {
-                      String s=scanner.next();
-                    if ( s.trim().equalsIgnoreCase("add")) {
+                    String s = sc.nextLine();
+                    if (s.trim().equalsIgnoreCase("add")) {
                         addPerson();
+
                     }
                 }
             });
 
             try {
                 Thread.sleep(7000);
-                 future.cancel(true);
-                
+                future.cancel(true);
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-                  
-            System.out.println("Interview finished with " + currentCandidate.getName());
+
+            System.out.println("InterviewEvaluator finished with " + currentCandidate.getName());
         }
         executor.shutdownNow();
-        
 
     }
 
@@ -92,18 +94,29 @@ public class App {
             if (input.equalsIgnoreCase("n")) {
                 break;
             }
+
         }
     }
 
     public void addPerson() {
+
         System.out.print("Enter person's name: ");
         String name = scanner.nextLine();
-        System.out.print("Enter person's age: ");
-        int age = scanner.nextInt();
-        scanner.nextLine();
+        while (true) {
+            try {
+                System.out.print("Enter person's age: ");
+                int age = scanner.nextInt();
+                scanner.nextLine();
+                Person person = new Person(name, age);
+                personQueue.add(person);
+                break;
+            } catch (Exception e) {
+                System.out.println("Invalid age input. Please enter a valid age (must be a number):");
 
-        Person person = new Person(name, age);
-        personQueue.add(person);
+                scanner.nextLine();
+            }
+        }
+
     }
 
     public void printDetails() {
