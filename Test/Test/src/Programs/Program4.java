@@ -27,6 +27,7 @@ public class Program4 {
             }
             else{
                 i++;
+                
             }
         }
         for (char[] row : ch) {

@@ -42,6 +42,7 @@ public class Program5 {
                 sb.append((char) (rev + 'A'));
                 freq1[rev]--;  
             }
+            
             rev--;
         }
     

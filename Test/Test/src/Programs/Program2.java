@@ -13,6 +13,7 @@ public class Program2 {
         else{
              System.out.println(n+" is not a jumbled number");
         }
+        
            
     }
     public static boolean isValid(int n){

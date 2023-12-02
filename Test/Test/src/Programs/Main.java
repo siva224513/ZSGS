@@ -23,6 +23,7 @@ public class Main {
             else if(i%5==0){
                 sum+=i;
             }
+            
        }
        System.out.println(sum);
     }

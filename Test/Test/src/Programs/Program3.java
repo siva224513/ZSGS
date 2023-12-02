@@ -26,7 +26,8 @@ public class Program3 {
                 if((i>0&&(str.charAt(i-1)>=97 &&str.charAt(i-1)<=122)||str.charAt(i-1)==')'||str.charAt(i-1)=='(')
                 &&(i<n-1&&(str.charAt(i+1)>=97 &&str.charAt(i+1)<=122)||str.charAt(i+1)==')'||str.charAt(i+1)=='('))
                 {
-                    flag=true;                    
+                    flag=true;       
+                                 
                 }      
                 else{
                     flag=false;
