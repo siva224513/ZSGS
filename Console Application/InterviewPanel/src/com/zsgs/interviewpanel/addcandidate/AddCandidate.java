@@ -17,6 +17,7 @@ public class AddCandidate {
 		Candidate candidate = new Candidate();
 		candidate.setName(sc.nextLine());
 		addCandidateViewModel.validate(candidate);
+		
 	}
 
 	public void onSuccess() {

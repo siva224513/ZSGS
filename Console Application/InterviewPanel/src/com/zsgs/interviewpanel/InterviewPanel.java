@@ -16,6 +16,7 @@ public class InterviewPanel {
 		Scanner scanner = new Scanner(System.in);
 		int choice = scanner.nextInt();
 		switch(choice) {
+			
 		case 1:
 			AddCandidate addCandidate = new AddCandidate();
 			addCandidate.getCandidateInfo();

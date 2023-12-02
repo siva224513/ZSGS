@@ -11,6 +11,8 @@ public class AddUser {
         addCanditateViewModel = new AddUserViewModel(this);
     }
 
+    
+
     public void getUserInfo(){
         Scanner scan = new Scanner(System.in);
         User user = new User();

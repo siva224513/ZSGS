@@ -77,6 +77,7 @@ public class InterviewEvaluator {
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                
             }
 
             System.out.println("InterviewEvaluator finished with " + currentCandidate.getName());

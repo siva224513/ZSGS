@@ -25,6 +25,7 @@ public class App {
             navigateMenu(CATEGORIES_KEY);
 
         } catch (Exception e) {
+            
             e.printStackTrace();
         }
     }

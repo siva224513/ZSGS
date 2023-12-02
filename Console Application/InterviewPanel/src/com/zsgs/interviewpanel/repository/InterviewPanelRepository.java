@@ -12,6 +12,7 @@ public class InterviewPanelRepository {
 	private List<Candidate> candidatesList = new ArrayList<Candidate>(); 
 	
 	private InterviewPanelRepository() {
+	
 		
 	}
 	
