@@ -12,9 +12,10 @@ public class AddCandidate {
 	}
 	
 	public void getCandidateInfo() {
-		//getinfo logic
+		
 		Scanner sc = new Scanner(System.in);
 		Candidate candidate = new Candidate();
+		System.out.println("Enter Candidate name:");
 		candidate.setName(sc.nextLine());
 		addCandidateViewModel.validate(candidate);
 		

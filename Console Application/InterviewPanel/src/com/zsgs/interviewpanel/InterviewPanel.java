@@ -12,7 +12,7 @@ public class InterviewPanel {
 	}
 
 	private void init() {
-		System.out.println("1. Add Candidate\n2. View Candidate");
+		System.out.println("1. Add Candidate\n2.View Candidate");
 		Scanner scanner = new Scanner(System.in);
 		int choice = scanner.nextInt();
 		switch(choice) {
@@ -21,6 +21,8 @@ public class InterviewPanel {
 			AddCandidate addCandidate = new AddCandidate();
 			addCandidate.getCandidateInfo();
 			break;
+
+
 		}
 	}
 

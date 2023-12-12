@@ -18,7 +18,7 @@ class AddCandidateViewModel {
 			
 			this.addCandidate.onSuccess();
 		}else {
-			
+			 
 			this.addCandidate.showError("Invalid Name - Name length should be min 3 and Max 50");
 		}
 		

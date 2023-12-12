@@ -1,18 +1,34 @@
-## Getting Started
+                               Interview panel Application
+                               ---------------------------
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Target Audience : Interview organizer
+Memebers : 1
 
-## Folder Structure
+Feartures:
 
-The workspace contains two folders by default, where:
+1. Add new candidates to the interivew panel
+2. start the interview for the candidate manually.
+3. view the current interview candidate
+4. view the candidates in the waiting list
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Model classes:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Candidate:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+|1. reg.No - int
+|2. name   - String
+|3. dob    - long
+|4. qualification - String
+|5. gender - enum
+|6. address - String
+|7. passedout - int
+|8. Interview status - enum
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Interview Details:
+
+|1. id - int
+|2. Interviewer name  - String
+|3. start time   - long
+|4. end time - String
+|5. result - boolean

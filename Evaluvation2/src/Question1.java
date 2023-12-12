@@ -30,7 +30,7 @@ public class Question1 {
                 max = sum;
             }
             if (sum < 0) {
-                curr = i + 1;
+                curr = i +1;
                 sum = 0;
             }
         }

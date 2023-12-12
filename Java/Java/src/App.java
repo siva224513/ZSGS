@@ -1,5 +1,10 @@
-public class App {
+public class App implements Comparable<Student> {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+       
+    }
+
+    @Override
+    public int compareTo(Student o) {
+       return 
     }
 }
