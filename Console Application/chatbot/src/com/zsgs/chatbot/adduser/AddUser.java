@@ -14,6 +14,7 @@ public class AddUser {
     public void getUserInfo() {
         Scanner scanner = new Scanner(System.in);
         UserDetails user = new UserDetails();
+        System.out.println("Please enter your details to access our courses");
         System.out.println("Enter your name:");
         user.setName(scanner.next());
         System.out.println("Enter your email");
@@ -30,6 +31,21 @@ public class AddUser {
 
     public void error(String errorMessage) {
         System.out.println(errorMessage);
+    }
+
+    public void displayWelcomeMessage() {
+        System.out.println(
+                "**************************************************************************************************************");
+        System.out.println(
+                "*                              Welcome to Our Online Course Platform!                                        *");
+        System.out.println(
+                "*                 Expand your knowledge and skills with our diverse range of courses                         *");
+        System.out.println(
+                "*                                  Let's get started!                                                        *");
+        System.out.println(
+                "**************************************************************************************************************");
+
+          
     }
 
 }

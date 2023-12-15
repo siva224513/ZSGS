@@ -11,11 +11,12 @@ public class ChatBot {
   }
 
   private void init() {
-   GetCourseView getcourse=new GetCourseView();
-   getcourse.getCourse();
-  //  AddUser addUser=new AddUser();
-  //  addUser.getUserInfo();
 
+    AddUser addUser = new AddUser();
+    addUser.displayWelcomeMessage();
+    addUser.getUserInfo();
+    GetCourseView getcourse = new GetCourseView();
+    getcourse.getCourse();
 
   }
 
