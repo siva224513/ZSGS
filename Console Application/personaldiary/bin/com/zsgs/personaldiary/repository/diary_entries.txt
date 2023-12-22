@@ -1,0 +1,4 @@
+2023-12-22 14:39:23 - today is very special day
+2023-12-22 14:40:56 - today is done 3 console projects
+2023-12-22 14:41:03 - siva
+2023-12-22 14:42:39 - A checked exception is caught at compile time whereas a runtime or unchecked exception is, as it states, at runtime. A checked exception must be handled either by re-throwing or with a try catch block, whereas an unchecked isn't required to be handled.

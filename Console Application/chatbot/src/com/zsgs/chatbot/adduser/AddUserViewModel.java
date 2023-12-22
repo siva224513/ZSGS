@@ -3,17 +3,20 @@ package com.zsgs.chatbot.adduser;
 import java.util.Map;
 import java.util.Scanner;
 
+import org.json.simple.parser.ParseException;
+
 import com.zsgs.chatbot.dto.UserDetails;
 import com.zsgs.chatbot.repository.CourseDataRepository;
 
 public class AddUserViewModel {
     private AddUser addUser;
+    Scanner scanner = new Scanner(System.in);
 
     public AddUserViewModel(AddUser addUser) {
         this.addUser = addUser;
     }
 
-    public void validate(UserDetails user) {
+    public void validate(UserDetails user) throws ParseException {
         boolean isValidName = isValidName(user.getName());
         boolean isValidEmail = isValidEmail(user.getEmail());
         boolean isValidPhoneNumber = isValidPhoneNumber(user.getPhoneNumber());
@@ -37,19 +40,18 @@ public class AddUserViewModel {
             }
         }
 
-       
-       CourseDataRepository.getInstance().addUser(user);
-       this.addUser.onSuccess();
+        CourseDataRepository.getInstance().addUser(user);
+        this.addUser.onSuccess();
 
     }
 
-    private boolean isValidPhoneNumber(String phoneNumber) {
+    public boolean isValidPhoneNumber(String phoneNumber) {
         String pattern = "^[6-9]\\d{9}$";
         boolean isMatch = phoneNumber.matches(pattern);
         return phoneNumber != null && isMatch;
     }
 
-    private boolean isValidEmail(String email) {
+    public boolean isValidEmail(String email) {
         String emailPattern = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
         boolean isMatch = email.matches(emailPattern);
         return email != null && isMatch;
@@ -64,4 +66,15 @@ public class AddUserViewModel {
         boolean isMatch = name.matches(namePattern);
         return isMatch;
     }
+
+    public UserDetails getUserFromJson(String email) {
+        UserDetails user = null;
+        Map<String, UserDetails> usersFromJSON = CourseDataRepository.getInstance().getUserDataBase();
+
+        if (usersFromJSON != null) {
+            user = usersFromJSON.get(email);
+        }
+        return user;
+    }
+
 }

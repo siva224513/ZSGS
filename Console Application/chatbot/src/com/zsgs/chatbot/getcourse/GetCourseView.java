@@ -1,24 +1,56 @@
 package com.zsgs.chatbot.getcourse;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import com.zsgs.chatbot.dto.UserDetails;
+
 import java.util.Scanner;
 
 public class GetCourseView {
   private GetCourseViewModel getCourseViewModel;
+  Scanner scanner = new Scanner(System.in);
   private static final String CATEGORIES_KEY = "categories";
 
   public GetCourseView() {
     getCourseViewModel = new GetCourseViewModel(this);
   }
 
+  public void start(UserDetails user) {
+    int option;
+    do {
+
+      System.out.println("Logged in as: " + user.getName());
+      System.out.println("1. Get Course");
+      System.out.println("2. Logout");
+
+      option = scanner.nextInt();
+      scanner.nextLine();
+
+      switch (option) {
+        case 1:
+          getCourse();
+          break;
+        case 2:
+          System.out.println("Logged out successfully.");
+          user = null;
+          break;
+        default:
+          System.out.println("Invalid option. Please try again.");
+          break;
+      }
+    } while (option != 2);
+  }
+
   public void getCourse() {
-    Scanner scanner = new Scanner(System.in);
+
     String currentMenu = CATEGORIES_KEY;
     boolean exit = false;
     while (!exit) {
       displayCourse(currentMenu);
+      try{
       int choice = scanner.nextInt();
       switch (choice) {
         case 0:
@@ -45,6 +77,10 @@ public class GetCourseView {
           break;
 
       }
+    } catch(InputMismatchException e){
+       System.out.println("Invaild Input. Please enter a valid number");
+       scanner.next();
+    }
     }
   }
 
