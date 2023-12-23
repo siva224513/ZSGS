@@ -11,7 +11,8 @@ public class DungeonGame {
         Levels levels = new Levels();
 
         System.out.println("Welcome to DungeonGame");
-        System.out.println("1.Adventurer and Gold\n2.Adventurer and gold with monster\n3.Adventurer and gold with monster(Path)");
+        System.out.println(
+                "1.Adventurer and Gold\n2.Adventurer and gold with monster\n3.Adventurer and gold with monster(Path)");
 
         int level = scanner.nextInt();
         switch (level) {
@@ -42,8 +43,14 @@ public class DungeonGame {
                 goldPostionRow = scanner.nextInt();
                 goldPostionColumn = scanner.nextInt();
 
-                levels.level2(row, column, adventurerPositionRow - 1, adventurerPositionColumn - 1, goldPostionRow - 1,
+                int path=levels.level2(row, column, adventurerPositionRow - 1, adventurerPositionColumn - 1, goldPostionRow - 1,
                         goldPostionColumn - 1, monsterPositionRow - 1, monsterPositionColumn - 1);
+                if(path!=-1){
+                    System.out.println("Minimum Number of steps"+path);
+                }
+                else{
+                    System.out.println("No possible solution");
+                }
                 break;
 
             case 3:
@@ -59,10 +66,10 @@ public class DungeonGame {
                 System.out.println("Enter position(coordinates) of the gold");
                 goldPostionRow = scanner.nextInt();
                 goldPostionColumn = scanner.nextInt();
-                levels.level3(row, column, adventurerPositionRow - 1, adventurerPositionColumn - 1, goldPostionRow - 1,
-                        goldPostionColumn - 1, monsterPositionRow - 1, monsterPositionColumn - 1);
+                levels.level3(row, column, adventurerPositionRow , adventurerPositionColumn , goldPostionRow ,
+                        goldPostionColumn , monsterPositionRow , monsterPositionColumn );
                 break;
-             
+
             default:
                 break;
         }

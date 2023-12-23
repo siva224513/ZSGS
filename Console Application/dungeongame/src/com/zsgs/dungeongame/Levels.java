@@ -29,7 +29,7 @@ public class Levels {
 
     }
 
-    public void level2(int row, int column, int adventurerPositionRow, int adventurerPositionColumn, int goldPostionRow,
+    public int level2(int row, int column, int adventurerPositionRow, int adventurerPositionColumn, int goldPostionRow,
             int goldPostionColumn, int monsterPositionRow, int monsterPositionColumn) {
 
         char box[][] = new char[row][column];
@@ -62,38 +62,59 @@ public class Levels {
             }
         }
         if (adventurerMinPath <= monsterMinPath) {
-            System.out.println("Minimum number of steps: " + adventurerMinPath);
+            return adventurerMinPath;
         } else {
-            System.out.println("No possible solution");
+            return -1;
         }
     }
 
     public void level3(int row, int column, int adventurerPositionRow, int adventurerPositionColumn, int goldPostionRow,
             int goldPostionColumn, int monsterPositionRow, int monsterPositionColumn) {
-         
-               
+        int minPath =level2(row, column, adventurerPositionRow, adventurerPositionColumn, goldPostionRow, goldPostionColumn, monsterPositionRow, monsterPositionColumn);
+        if(minPath!=-1){
+        if (adventurerPositionColumn <= goldPostionColumn) {
+            while (adventurerPositionColumn < goldPostionColumn) {
+                System.out.println((adventurerPositionRow) + " " + (++adventurerPositionColumn));
+            }
+        } else {
+            while (adventurerPositionColumn > goldPostionColumn) {
+                System.out.println((adventurerPositionRow) + " " + ((--adventurerPositionColumn)));
+            }
+        }
+
+        if (adventurerPositionRow > goldPostionRow) {
+            while (adventurerPositionRow > goldPostionRow) {
+                System.out.println((--adventurerPositionRow) + " " + (adventurerPositionColumn));
+            }
+        } else {
+            while (adventurerPositionRow < goldPostionRow) {
+                System.out.println((++adventurerPositionRow) + " " + (adventurerPositionColumn));
+            }
+        }}
+        else{
+            System.out.println("No possible solution");
+        }
+
     }
 
-
     private int search(char[][] box, int i, int j, int row, int column, int k) {
-        if (i >= row || i < 0 || j < 0 || j >= column || box[i][j] == '*' )
+        if (i >= row || i < 0 || j < 0 || j >= column || box[i][j] == '*')
             return Integer.MAX_VALUE;
         if (box[i][j] == 'G') {
             return k;
         }
         char temp = box[i][j];
         box[i][j] = '*';
-       
+
         int up = search(box, i - 1, j, row, column, k + 1);
         int down = search(box, i + 1, j, row, column, k + 1);
         int left = search(box, i, j - 1, row, column, k + 1);
         int right = search(box, i, j + 1, row, column, k + 1);
         box[i][j] = temp;
-       
-        
+
         int minPath = Math.min(Math.min(up, down), Math.min(left, right));
-         return minPath;
-        
+        return minPath;
+
     }
 
 }
