@@ -11,7 +11,7 @@ public class DungeonGame {
         Levels levels = new Levels();
 
         System.out.println("Welcome to DungeonGame");
-        System.out.println("1.Adventurer and Gold\n2.Adventurer and gold with monster");
+        System.out.println("1.Adventurer and Gold\n2.Adventurer and gold with monster\n3.Adventurer and gold with monster(Path)");
 
         int level = scanner.nextInt();
         switch (level) {
@@ -45,6 +45,24 @@ public class DungeonGame {
                 levels.level2(row, column, adventurerPositionRow - 1, adventurerPositionColumn - 1, goldPostionRow - 1,
                         goldPostionColumn - 1, monsterPositionRow - 1, monsterPositionColumn - 1);
                 break;
+
+            case 3:
+                System.out.println("Dimensions of the dungeon(Row X column):");
+                row = scanner.nextInt();
+                column = scanner.nextInt();
+                System.out.println("Enter Position(coordinates) of the adventurer");
+                adventurerPositionRow = scanner.nextInt();
+                adventurerPositionColumn = scanner.nextInt();
+                System.out.println("Enter position of the monster");
+                monsterPositionRow = scanner.nextInt();
+                monsterPositionColumn = scanner.nextInt();
+                System.out.println("Enter position(coordinates) of the gold");
+                goldPostionRow = scanner.nextInt();
+                goldPostionColumn = scanner.nextInt();
+                levels.level3(row, column, adventurerPositionRow - 1, adventurerPositionColumn - 1, goldPostionRow - 1,
+                        goldPostionColumn - 1, monsterPositionRow - 1, monsterPositionColumn - 1);
+                break;
+             
             default:
                 break;
         }
