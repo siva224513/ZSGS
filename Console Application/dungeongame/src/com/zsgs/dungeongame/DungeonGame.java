@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DungeonGame {
     public static Scanner scanner = new Scanner(System.in);
     public static int row = 0, column = 0, adventurerPositionColumn = 0, adventurerPositionRow = 0, goldPostionRow = 0,
-            goldPostionColumn = 0, monsterPositionRow = 0, monsterPositionColumn = 0;
+            goldPostionColumn = 0, monsterPositionRow = 0, monsterPositionColumn = 0,triggerRow=0,triggerColumn=0;
 
     public static void main(String[] args) throws Exception {
         Levels levels = new Levels();
@@ -69,7 +69,26 @@ public class DungeonGame {
                 levels.level3(row, column, adventurerPositionRow , adventurerPositionColumn , goldPostionRow ,
                         goldPostionColumn , monsterPositionRow , monsterPositionColumn );
                 break;
-
+            case 4:
+                System.out.println("Dimensions of the dungeon(Row X column):");
+                row = scanner.nextInt();
+                column = scanner.nextInt();
+                System.out.println("Enter Position(coordinates) of the adventurer");
+                adventurerPositionRow = scanner.nextInt();
+                adventurerPositionColumn = scanner.nextInt();
+                System.out.println("Enter position of the monster");
+                monsterPositionRow = scanner.nextInt();
+                monsterPositionColumn = scanner.nextInt();
+                System.out.println("Enter position of the trigger");
+                triggerRow=scanner.nextInt();
+                triggerColumn=scanner.nextInt();
+                System.out.println("Enter position(coordinates) of the gold");
+                goldPostionRow = scanner.nextInt();
+                goldPostionColumn = scanner.nextInt();
+                levels.level4(row, column, adventurerPositionRow-1 , adventurerPositionColumn-1 , goldPostionRow-1 ,
+                        goldPostionColumn-1 , monsterPositionRow -1, monsterPositionColumn -1,triggerRow-1,triggerColumn-1);
+                break;
+              
             default:
                 break;
         }
