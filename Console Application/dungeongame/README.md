@@ -1,18 +1,24 @@
-## Getting Started
+# DungeonGame
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This Java-based text adventure game features various levels set in a dungeon. Each level presents different challenges involving an adventurer, monsters, gold, triggers, and pits.
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+## Gameplay
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Upon starting the game, follow the instructions to select a level and set up the dungeon's dimensions, adventurer position, monster position, gold location, trigger position, and pits.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Levels
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. **Adventurer and Gold**: Simplest level, reach the gold.
+2. **Adventurer and Gold with Monster**: Avoid the monster while getting the gold.
+3. **Adventurer and Gold with Monster (Path)**: Find a safe path considering the monster's presence.
+4. **Adventurer and Gold with Monster and Trigger**: Trigger mechanisms to aid in reaching the gold.
+5. **Adventurer and Gold with Pit**: Navigate around pits to reach the gold.
+6. **Adventurer and Gold with Monster and Pit**: Manage monsters and pits to obtain the gold.
+7. **Adventurer and Gold with Monster, Pit, and Trigger**: Handle multiple challenges to reach the gold.
 
-## Dependency Management
+## Usage
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Provide the dungeon dimensions and positions for different elements based on the chosen level. The game output will display steps or paths to reach the gold while considering various obstacles, triggers, and monsters.
+
+
