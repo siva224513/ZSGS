@@ -188,7 +188,7 @@ public class Levels {
 
     }
 
-    public void level6(int row, int column, int adventurerPositionRow, int adventurerPositionColumn,
+    public int level6(int row, int column, int adventurerPositionRow, int adventurerPositionColumn,
             int monsterPositionRow, int monsterPositionColumn, int goldPostionRow,
             int goldPostionColumn, ArrayList<int[]> list) {
 
@@ -209,13 +209,13 @@ public class Levels {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 if (box[i][j] == 'A') {
-                    adventurerMinPath = search(box, i, j, row, column, 0, 'G');                   
+                    adventurerMinPath = search(box, i, j, row, column, 0, 'G');
                     break;
                 }
             }
         }
 
-         for (int i = 0; i < row; i++) {
+        for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 if (box[i][j] == 'M') {
                     monsterMinPath = search(box, i, j, row, column, 0, 'G');
@@ -223,14 +223,65 @@ public class Levels {
                 }
             }
         }
-        if(adventurerMinPath<=monsterMinPath){
-            System.out.println("Minimum number of steps:"+adventurerMinPath);
+        if (adventurerMinPath <= monsterMinPath) {
+            return adventurerMinPath;
+        } 
+        else{
+            return -1;
+        }
+        
+
+    }
+
+    public void level7(int row, int column, int adventurerPositionRow, int adventurerPositionColumn,
+            int monsterPositionRow, int monsterPositionColumn, int triggerRow, int triggerColumn, int goldPostionRow,
+            int goldPostionColumn, ArrayList<int[]> list) {
+
+              ArrayList<int[]> newList =list;
+        int minPath = level6(row, column, adventurerPositionRow, adventurerPositionColumn, monsterPositionRow,
+                monsterPositionColumn, goldPostionRow, goldPostionColumn, list);
+            
+        if (minPath == -1) {
+            char box[][] = new char[row][column];
+            for (char c[] : box) {
+                Arrays.fill(c, '0');
+            }
+            box[adventurerPositionRow][adventurerPositionColumn] = 'A';
+            box[goldPostionRow][goldPostionColumn] = 'G';
+            box[monsterPositionRow][monsterPositionColumn] = 'M';
+            box[triggerRow][triggerColumn] = 'T';
+            for (int a[] : newList) {
+              //  System.out.println(Arrays.toString(a));
+                int i = a[0];
+                int j = a[1];
+               // System.out.println(i+" "+j);
+                box[i][j] = 'P';
+
+            }
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < column; j++) {
+                    if (box[i][j] == 'A') {
+                        adventurerMinPath = search(box, i, j, row, column, 0, 'T');
+                        System.out.println(adventurerMinPath);
+                        break;
+
+                    }
+                }
+            }
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < column; j++) {
+                    if (box[i][j] == 'T') {
+                        triggerMinPath = search(box, i, j, row, column, 0, 'G');
+                        System.out.println(triggerMinPath);
+                        break;
+                    }
+                }
+            }
+            System.out.println("Minimum number of steps: " + (adventurerMinPath + triggerMinPath));
         }
         else{
-            System.out.println("No possible solution");
+            System.out.println("Minimum number of steps :"+minPath);
         }
-
-
     }
 
 }
