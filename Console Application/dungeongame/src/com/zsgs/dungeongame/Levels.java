@@ -99,7 +99,7 @@ public class Levels {
     }
 
     private int search(char[][] box, int i, int j, int row, int column, int k, char c) {
-        if (i >= row || i < 0 || j < 0 || j >= column || box[i][j] == '*' || box[i][j] == 'P')
+        if (i >= row || i < 0 || j < 0 || j >= column || box[i][j] == '*' || (c != 'M' && box[i][j] == 'P'))
             return Integer.MAX_VALUE;
         if (box[i][j] == c) {
             return k;
@@ -165,28 +165,71 @@ public class Levels {
         }
         box[adventurerPositionRow][adventurerPositionColumn] = 'A';
         box[goldPostionRow][goldPostionColumn] = 'G';
-        for(int a[]:list){
-            int i=--a[0];
-            int j=--a[1];
-            box[i][j]='P';
-            
+        for (int a[] : list) {
+            int i = --a[0];
+            int j = --a[1];
+            box[i][j] = 'P';
+
         }
-     
-      
+
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < column; j++) {
                 if (box[i][j] == 'A') {
                     int step = search(box, i, j, row, column, 0, 'G');
-                   if(step!=Integer.MAX_VALUE){
-                    System.out.println("Minimum number of steps: "+step);
-                   }
-                   else{
-                    System.out.println("No possible solution");
-                   }
+                    if (step != Integer.MAX_VALUE) {
+                        System.out.println("Minimum number of steps: " + step);
+                    } else {
+                        System.out.println("No possible solution");
+                    }
                     break;
                 }
             }
         }
+
+    }
+
+    public void level6(int row, int column, int adventurerPositionRow, int adventurerPositionColumn,
+            int monsterPositionRow, int monsterPositionColumn, int goldPostionRow,
+            int goldPostionColumn, ArrayList<int[]> list) {
+
+        char box[][] = new char[row][column];
+        for (char c[] : box) {
+            Arrays.fill(c, '0');
+        }
+        box[adventurerPositionRow][adventurerPositionColumn] = 'A';
+        box[monsterPositionRow][monsterPositionColumn] = 'M';
+        box[goldPostionRow][goldPostionColumn] = 'G';
+        for (int a[] : list) {
+            int i = --a[0];
+            int j = --a[1];
+            box[i][j] = 'P';
+
+        }
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                if (box[i][j] == 'A') {
+                    adventurerMinPath = search(box, i, j, row, column, 0, 'G');                   
+                    break;
+                }
+            }
+        }
+
+         for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                if (box[i][j] == 'M') {
+                    monsterMinPath = search(box, i, j, row, column, 0, 'G');
+                    break;
+                }
+            }
+        }
+        if(adventurerMinPath<=monsterMinPath){
+            System.out.println("Minimum number of steps:"+adventurerMinPath);
+        }
+        else{
+            System.out.println("No possible solution");
+        }
+
 
     }
 

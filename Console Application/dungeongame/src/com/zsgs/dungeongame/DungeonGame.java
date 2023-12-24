@@ -8,13 +8,14 @@ public class DungeonGame {
     public static int row = 0, column = 0, adventurerPositionColumn = 0, adventurerPositionRow = 0, goldPostionRow = 0,
             goldPostionColumn = 0, monsterPositionRow = 0, monsterPositionColumn = 0, triggerRow = 0, triggerColumn = 0,
             pitRow = 0, pitColumn = 0;
+    public static ArrayList<int[]> list = null;
 
     public static void main(String[] args) throws Exception {
         Levels levels = new Levels();
 
         System.out.println("Welcome to DungeonGame");
         System.out.println(
-                "1.Adventurer and Gold\n2.Adventurer and gold with monster\n3.Adventurer and gold with monster(Path)\n4.Adventurer and gold with (monster X trigger)");
+                "1.Adventurer and Gold\n2.Adventurer and gold with monster\n3.Adventurer and gold with monster(Path)\n4.Adventurer and gold with (monster X trigger)\n5.Adventurer and gold with pit");
 
         int level = scanner.nextInt();
         switch (level) {
@@ -104,7 +105,7 @@ public class DungeonGame {
                 goldPostionColumn = scanner.nextInt();
                 System.out.println("Enter the number of pits");
                 int n = scanner.nextInt();
-                ArrayList<int[]> list = new ArrayList<>();
+                list = new ArrayList<>();
                 for (int i = 0; i < n; i++) {
                     System.out.println("Enter position of the pits:");
                     pitRow = scanner.nextInt();
@@ -116,6 +117,35 @@ public class DungeonGame {
                 levels.level5(row, column, adventurerPositionRow - 1, adventurerPositionColumn - 1, goldPostionRow - 1,
                         goldPostionColumn - 1, list);
                 break;
+            case 6:
+                System.out.println("Dimensions of the dungeon(Row X column):");
+                row = scanner.nextInt();
+                column = scanner.nextInt();
+                System.out.println("Enter Position(coordinates) of the adventurer");
+                adventurerPositionRow = scanner.nextInt();
+                adventurerPositionColumn = scanner.nextInt();
+                System.out.println("Enter position of the monster");
+                monsterPositionRow = scanner.nextInt();
+                monsterPositionColumn = scanner.nextInt();
+                System.out.println("Enter position(coordinates) of the gold");
+                goldPostionRow = scanner.nextInt();
+                goldPostionColumn = scanner.nextInt();
+                System.out.println("Enter the number of pits");
+                int numberOfPits = scanner.nextInt();
+                list = new ArrayList<>();
+                for (int i = 0; i < numberOfPits; i++) {
+                    System.out.println("Enter position of the pits:");
+                    pitRow = scanner.nextInt();
+                    pitColumn = scanner.nextInt();
+                    list.add(new int[] { pitRow, pitColumn });
+
+                }
+
+                levels.level6(row, column, adventurerPositionRow - 1, adventurerPositionColumn - 1,
+                        monsterPositionRow - 1, monsterPositionColumn - 1, goldPostionRow - 1,
+                        goldPostionColumn - 1, list);
+                break;
+
             default:
                 break;
         }
