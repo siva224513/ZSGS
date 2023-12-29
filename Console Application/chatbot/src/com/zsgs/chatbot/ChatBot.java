@@ -2,7 +2,7 @@ package com.zsgs.chatbot;
 
 import java.util.Scanner;
 
-import org.json.simple.parser.ParseException;
+
 
 import com.zsgs.chatbot.adduser.AddUser;
 import com.zsgs.chatbot.dto.UserDetails;
@@ -10,12 +10,12 @@ import com.zsgs.chatbot.getcourse.GetCourseView;
 
 public class ChatBot {
 
-  public static void main(String[] args) throws ParseException {
+  public static void main(String[] args)  {
     ChatBot chatbot = new ChatBot();
     chatbot.init();
   }
 
-  private void init() throws ParseException {
+  private void init()  {
 
     AddUser addUser = new AddUser();
     UserDetails user = null;

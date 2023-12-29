@@ -1,0 +1,575 @@
+{
+    "courses": {
+        "categories": {
+            "1": "Design",
+            "2": "Development",
+            "3": "Marketing",
+            "4": "It and Software",
+            "5": "Personal Development",
+            "6": "Business",
+            "7": "Photography"
+           
+        },
+        "Design": {
+        
+            "1": "3D_Modeling",
+            "2": "Figma",
+            "3": "AutoCAD",
+            "4": "Blender",
+            "5": "Graphic_Design",
+            "6": "Adobe_Photoshop"
+        },
+        
+   
+        "3D_Modeling": {
+            "title": "3D Modeling",
+            "description": "Learn the fundamentals of 3D modeling using industry-standard software.",
+            "instructor": "John Smith",
+            "rating": 4.5,
+            "duration": "6 weeks",
+            "enrollment_fee": "$99",
+            "prerequisites": "Basic understanding of design principles",
+            "reviews": [
+                {"user": "Alice", "comment": "Great course for beginners!", "rating": 4.0},
+                {"user": "Bob", "comment": "Instructor explains complex concepts well.", "rating": 4.8}
+            ]
+            
+        },
+        "Figma": {
+            "title": "Figma",
+            "description": "Master Figma to create stunning designs and collaborate effectively.",
+            "instructor": "Emily Johnson",
+            "rating": 4.8,
+            "duration": "4 weeks",
+            "enrollment_fee": "$79",
+            "prerequisites": "Basic knowledge of design tools",
+            "reviews": [
+                {"user": "Eva", "comment": "Highly recommended for UI/UX designers!", "rating": 4.9},
+                {"user": "Chris", "comment": "Great course with practical exercises.", "rating": 4.7}
+            ]
+        },
+        "AutoCAD": {
+            "title": "AutoCAD",
+            "description": "Explore AutoCAD for precise 2D and 3D designs. Learn drafting and modeling techniques.",
+            "instructor": "Andrew Clark",
+            "rating": 4.6,
+            "duration": "8 weeks",
+            "enrollment_fee": "$89",
+            "prerequisites": "Basic understanding of drafting",
+            "reviews": [
+                {"user": "Sophie", "comment": "Good course content but needs better explanations.", "rating": 3.8},
+                {"user": "David", "comment": "Great for beginners to get started with CAD.", "rating": 4.2}
+            ]
+        },
+        "Blender": {
+            "title": "Blender",
+            "description": "Learn Blender for 3D modeling, animation, and rendering.",
+            "instructor": "Sarah Johnson",
+            "rating": 4.7,
+            "duration": "7 weeks",
+            "enrollment_fee": "$109",
+            "prerequisites": "Basic understanding of 3D concepts",
+            "reviews": [
+                {"user": "Olivia", "comment": "Extensive course with great resources!", "rating": 4.5},
+                {"user": "Daniel", "comment": "Challenging but rewarding experience.", "rating": 4.8}
+            ]
+        },
+        "Graphic_Design": {
+            "title": "Graphic Design",
+            "description": "Explore the principles of graphic design and visual communication.",
+            "instructor": "Mark Johnson",
+            "rating": 4.4,
+            "duration": "5 weeks",
+            "enrollment_fee": "$79",
+            "prerequisites": "Basic understanding of design software",
+            "reviews": [
+                {"user": "Sophia", "comment": "Comprehensive content and practical exercises!", "rating": 4.6},
+                {"user": "Jack", "comment": "Great course for aspiring designers.", "rating": 4.2}
+            ]
+        },
+        "Adobe_Photoshop": {
+            "title": "Adobe Photoshop",
+            "description": "Master Adobe Photoshop for image editing and graphic design.",
+            "instructor": "Jessica Miller",
+            "rating": 4.9,
+            "duration": "6 weeks",
+            "enrollment_fee": "$89",
+            "prerequisites": "Basic computer knowledge",
+            "reviews": [
+                {"user": "Max", "comment": "Excellent course with practical projects!", "rating": 4.8},
+                {"user": "Isabella", "comment": "Instructor is very knowledgeable.", "rating": 5.0}
+            ]
+        },
+
+        
+        "Web_Development": {
+            "title": "Web Development",
+            "description": "Build responsive websites using HTML, CSS, and JavaScript.",
+            "instructor": "Michael Brown",
+            "rating": 4.6,
+            "duration": "8 weeks",
+            "enrollment_fee": "$129",
+            "prerequisites": "Basic understanding of programming logic",
+            "reviews": [
+                {"user": "Sophie", "comment": "Very comprehensive course!", "rating": 4.5},
+                {"user": "Alex", "comment": "Helped me kickstart my web development journey.", "rating": 4.8}
+            ]
+        },
+        "Mobile_App_Development": {
+            "title": "Mobile App Development",
+            "description": "Create mobile apps for iOS and Android platforms.",
+            "instructor": "Sophia Lee",
+            "rating": 4.7,
+            "duration": "10 weeks",
+            "enrollment_fee": "$149",
+            "prerequisites": "Experience with programming languages",
+            "reviews": [
+                {"user": "Max", "comment": "Challenging but rewarding course!", "rating": 4.7},
+                {"user": "Olivia", "comment": "Great practical projects and explanations.", "rating": 4.9}
+            ]
+        },
+        "Python_Programming": {
+            "title": "Python Programming",
+            "description": "Learn Python, a versatile programming language used in various domains.",
+            "instructor": "David Johnson",
+            "rating": 4.9,
+            "duration": "6 weeks",
+            "enrollment_fee": "$99",
+            "prerequisites": "No prerequisites",
+            "reviews": [
+                {"user": "Emma", "comment": "Excellent course for beginners!", "rating": 4.8},
+                {"user": "James", "comment": "Great explanations and hands-on exercises.", "rating": 5.0}
+            ]
+        },
+        "Java_Programming": {
+            "title": "Java Programming",
+            "description": "Master Java, a powerful object-oriented programming language.",
+            "instructor": "Anna Williams",
+            "rating": 4.7,
+            "duration": "7 weeks",
+            "enrollment_fee": "$109",
+            "prerequisites": "Basic understanding of programming",
+            "reviews": [
+                {"user": "Sophia", "comment": "Well-structured course with challenging projects!", "rating": 4.6},
+                {"user": "Ben", "comment": "Helped me understand Java concepts thoroughly.", "rating": 4.8}
+            ]
+        },
+        "JavaScript_Fundamentals": {
+            "title": "JavaScript Fundamentals",
+            "description": "Learn the core concepts of JavaScript for web development.",
+            "instructor": "Daniel Miller",
+            "rating": 4.8,
+            "duration": "5 weeks",
+            "enrollment_fee": "$79",
+            "prerequisites": "Basic understanding of HTML and CSS",
+            "reviews": [
+                {"user": "Liam", "comment": "Great course to start with JavaScript!", "rating": 4.7},
+                {"user": "Ava", "comment": "Engaging exercises and clear explanations.", "rating": 4.9}
+            ]
+        },
+        "React_Framework": {
+            "title": "React Framework",
+            "description": "Learn React for building interactive user interfaces.",
+            "instructor": "Sophie Turner",
+            "rating": 4.9,
+            "duration": "6 weeks",
+            "enrollment_fee": "$89",
+            "prerequisites": "Strong knowledge of JavaScript",
+            "reviews": [
+                {"user": "Noah", "comment": "Awesome course to dive into React!", "rating": 4.8},
+                {"user": "Mia", "comment": "Clear and concise explanations throughout the course.", "rating": 5.0}
+            ]
+        },
+       
+        "Development": {
+            "1": "Web_Development",
+            "2": "Mobile_App_Development",
+            "3": "Python_Programming",
+            "4": "Java_Programming",
+            "5": "JavaScript_Fundamentals",
+            "6": "React_Framework"
+        },
+        "Marketing": {
+            "1": "Digital MarketingBasics",
+            "2": "SEO Fundamentals",
+            "3": "Social Media Marketing",
+            "4": "Email Marketing",
+            "5": "Content Marketing"
+        },
+
+
+        
+        "Digital Marketing Basics": {
+            "title": "Digital Marketing Basics",
+            "description": "Introduction to the foundational concepts of digital marketing.",
+            "instructor": "Sarah Johnson",
+            "rating": 4.2,
+            "duration": "4 weeks",
+            "enrollment_fee": "$49",
+            "prerequisites": "Basic understanding of online platforms",
+            "reviews": [
+                {"user": "Alex", "comment": "Great introductory course!", "rating": 4.0},
+                {"user": "Emma", "comment": "Covered a wide range of topics.", "rating": 4.4}
+            ]
+        },
+        "SEO Fundamentals": {
+            "title": "SEO Fundamentals",
+            "description": "Learn the basics of Search Engine Optimization techniques.",
+            "instructor": "Mark Thompson",
+            "rating": 4.5,
+            "duration": "6 weeks",
+            "enrollment_fee": "$69",
+            "prerequisites": "Understanding of web technologies",
+            "reviews": [
+                {"user": "Sophia", "comment": "Comprehensive content on SEO!", "rating": 4.7},
+                {"user": "Oliver", "comment": "Very practical and informative.", "rating": 4.3}
+            ]
+        },
+        "Social Media Marketing": {
+            "title": "Social Media Marketing",
+            "description": "Strategies and tactics for effective social media marketing campaigns.",
+            "instructor": "Rachel Carter",
+            "rating": 4.6,
+            "duration": "8 weeks",
+            "enrollment_fee": "$79",
+            "prerequisites": "Basic understanding of social platforms",
+            "reviews": [
+                {"user": "Liam", "comment": "Instructor had great real-world examples.", "rating": 4.8},
+                {"user": "Ava", "comment": "Learned a lot about social media strategies.", "rating": 4.5}
+            ]
+        },
+        "Email Marketing": {
+            "title": "Email Marketing",
+            "description": "Effective methods to utilize email for marketing purposes.",
+            "instructor": "Daniel Evans",
+            "rating": 4.4,
+            "duration": "5 weeks",
+            "enrollment_fee": "$59",
+            "prerequisites": "Understanding of email platforms",
+            "reviews": [
+                {"user": "Mia", "comment": "Very informative course on email marketing.", "rating": 4.6},
+                {"user": "William", "comment": "Practical tips for email campaigns.", "rating": 4.2}
+            ]
+        },
+        "Content Marketing": {
+            "title": "Content Marketing",
+            "description": "Strategies for creating and distributing valuable content for marketing.",
+            "instructor": "Sophie Baker",
+            "rating": 4.7,
+            "duration": "7 weeks",
+            "enrollment_fee": "$89",
+            "prerequisites": "Understanding of content creation",
+            "reviews": [
+                {"user": "Noah", "comment": "Great insights into content marketing!", "rating": 4.8},
+                {"user": "Ella", "comment": "Useful strategies for content distribution.", "rating": 4.6}
+            ]
+        },   
+
+        "It and Software": {
+            "1": "Cybersecurity_Essentials",
+            "2": "Cloud_Computing Basics",
+            "3": "Networking_Fundamentals",
+            "4": "Database_Management",
+            "5": "Operating_System_Concepts"
+        },
+
+        
+        "Cybersecurity_Essentials": {
+            "title": "Cybersecurity Essentials",
+            "description": "Learn the essential principles of cybersecurity and data protection.",
+            "instructor": "AnnaJohnson",
+            "rating": 4.7,
+            "duration": "8 weeks",
+            "enrollment_fee": "$129",
+            "prerequisites": "Basic computer knowledge",
+            "reviews": [
+                {"user": "Max", "comment": "Great introduction to cybersecurity!", "rating": 4.5},
+                {"user": "Olivia", "comment": "Very informative and well-structured course.", "rating": 4.8}
+            ]
+        },
+        "Cloud_Computing_Basics": {
+            "title": "Cloud Computing Basics",
+            "description": "Explore the fundamentals of cloud computing and its applications.",
+            "instructor": "DanielMiller",
+            "rating": 4.6,
+            "duration": "6 weeks",
+            "enrollment_fee": "$99",
+            "prerequisites": "Understanding of basic computing concepts",
+            "reviews": [
+                {"user": "Sophia", "comment": "Clear explanations and useful examples.", "rating": 4.4},
+                {"user": "Jack", "comment": "Great course for beginners in cloud computing.", "rating": 4.7}
+            ]
+        },
+        "Networking_Fundamentals": {
+            "title": "Networking Fundamentals",
+            "description": "Learn the basics of computer networking and protocols.",
+            "instructor": "JamesBrown",
+            "rating": 4.5,
+            "duration": "5 weeks",
+            "enrollment_fee": "$89",
+            "prerequisites": "Basic understanding of computers",
+            "reviews": [
+                {"user": "Lily", "comment": "Good course to start with networking concepts.", "rating": 4.2},
+                {"user": "Noah", "comment": "Helped me grasp networking concepts easily.", "rating": 4.8}
+            ]
+        },
+        "Database_Management": {
+            "title": "Database Management",
+            "description": "Master database design, implementation, and management.",
+            "instructor": "SophieTaylor",
+            "rating": 4.8,
+            "duration": "7 weeks",
+            "enrollment_fee": "$109",
+            "prerequisites": "Basic knowledge of databases",
+            "reviews": [
+                {"user": "Aiden", "comment": "Excellent content on database management!", "rating": 4.9},
+                {"user": "Mia", "comment": "Instructor's explanations are very clear.", "rating": 4.7}
+            ]
+        },
+        "Operating_System_Concepts": {
+            "title": "Operating System Concepts",
+            "description": "Understand the core concepts and principles of operating systems.",
+            "instructor": "WilliamClark",
+            "rating": 4.4,
+            "duration": "6 weeks",
+            "enrollment_fee": "$79",
+            "prerequisites": "Basic understanding of computers",
+            "reviews": [
+                {"user": "Lucas", "comment": "Great explanations of OS concepts!", "rating": 4.5},
+                {"user": "Avery", "comment": "Helped me understand OS principles better.", "rating": 4.3}
+            ]
+        },
+ 
+
+
+        "Personal Development": {
+            "1": "Time_Management",
+            "2": "Effective_Communication",
+            "3": "Stress_Management",
+            "4": "Goal_Setting",
+            "5": "Mindfulness_Practices"
+        },
+
+        
+    "Time_Management": {
+        "title": "Time Management",
+        "description": "Learn effective time management strategies to enhance productivity.",
+        "instructor": "Jennifer Lee",
+        "rating": 4.6,
+        "duration": "4 weeks",
+        "enrollment_fee": "$49",
+        "prerequisites": "Desire to improve time management skills",
+        "reviews": [
+            {"user": "Sam", "comment": "Great tips for managing time efficiently!", "rating": 4.5},
+            {"user": "Emily", "comment": "Helped me organize my schedule better.", "rating": 4.7}
+        ]
+    },
+    "Effective_Communication": {
+        "title": "Effective Communication",
+        "description": "Enhance communication skills for personal and professional development.",
+        "instructor": "Michael Johnson",
+        "rating": 4.7,
+        "duration": "6 weeks",
+        "enrollment_fee": "$69",
+        "prerequisites": "Interest in improving communication",
+        "reviews": [
+            {"user": "Sophia", "comment": "Very insightful course on communication!", "rating": 4.8},
+            {"user": "Daniel", "comment": "Improved my presentation skills significantly.", "rating": 4.6}
+        ]
+    },
+    "Stress_Management": {
+        "title": "Stress Management",
+        "description": "Learn effective techniques to manage and reduce stress in daily life.",
+        "instructor": "Alexandra Smith",
+        "rating": 4.5,
+        "duration": "5 weeks",
+        "enrollment_fee": "$59",
+        "prerequisites": "Desire to learn stress-relief methods",
+        "reviews": [
+            {"user": "Ethan", "comment": "Useful stress-relief exercises provided!", "rating": 4.4},
+            {"user": "Olivia", "comment": "Improved my coping mechanisms for stress.", "rating": 4.6}
+        ]
+    },
+    "Goal_Setting": {
+        "title": "Goal Setting",
+        "description": "Set and achieve goals effectively using proven strategies.",
+        "instructor": "David Johnson",
+        "rating": 4.8,
+        "duration": "4 weeks",
+        "enrollment_fee": "$59",
+        "prerequisites": "Motivation to set and achieve goals",
+        "reviews": [
+            {"user": "Ava", "comment": "Great course for setting achievable goals!", "rating": 4.7},
+            {"user": "William", "comment": "Helped me create a clear roadmap for my goals.", "rating": 4.9}
+        ]
+    },
+    "Mindfulness_Practices": {
+        "title": "Mindfulness Practices",
+        "description": "Learn mindfulness techniques to reduce stress and improve focus.",
+        "instructor": "Sophie Johnson",
+        "rating": 4.6,
+        "duration": "6 weeks",
+        "enrollment_fee": "$79",
+        "prerequisites": "Desire to learn mindfulness",
+        "reviews": [
+            {"user": "Liam", "comment": "Very calming exercises for mindfulness!", "rating": 4.5},
+            {"user": "Ella", "comment": "Improved my focus and mental clarity.", "rating": 4.7}
+        ]
+    },
+
+
+
+
+        "Business": {
+            "1": "Entrepreneurship",
+            "2": "Financial_Management",
+            "3": "Business_Strategy",
+            "4": "Leadership_Skills",
+            "5": "Marketing_Strategy"
+        },
+
+        
+    "Entrepreneurship": {
+        "title": "Entrepreneurship",
+        "description": "Learn the key principles and practices of starting and managing a business.",
+        "instructor": "Sophie Roberts",
+        "rating": 4.6,
+        "duration": "8 weeks",
+        "enrollment_fee": "$129",
+        "prerequisites": "Basic business understanding",
+        "reviews": [
+            {"user": "Mark", "comment": "Great insights for aspiring entrepreneurs!", "rating": 4.7},
+            {"user": "Emma", "comment": "Practical and informative course content.", "rating": 4.5}
+        ]
+    },
+    "Financial_Management": {
+        "title": "Financial Management",
+        "description": "Master financial analysis, budgeting, and investment strategies.",
+        "instructor": "Andrew Thompson",
+        "rating": 4.9,
+        "duration": "10 weeks",
+        "enrollment_fee": "$149",
+        "prerequisites": "Basic understanding of finance",
+        "reviews": [
+            {"user": "Oliver", "comment": "Highly recommended for finance enthusiasts!", "rating": 5.0},
+            {"user": "Sophia", "comment": "Clear explanations of financial concepts.", "rating": 4.8}
+        ]
+    },
+    "Business_Strategy": {
+        "title": "Business Strategy",
+        "description": "Explore strategic planning and decision-making for businesses.",
+        "instructor": "David Johnson",
+        "rating": 4.7,
+        "duration": "6 weeks",
+        "enrollment_fee": "$99",
+        "prerequisites": "Understanding of business operations",
+        "reviews": [
+            {"user": "James", "comment": "Great course to understand business strategies!", "rating": 4.6},
+            {"user": "Ava", "comment": "Helped me develop a strategic mindset.", "rating": 4.8}
+        ]
+    },
+    "Leadership_Skills": {
+        "title": "Leadership Skills",
+        "description": "Develop effective leadership qualities and management skills.",
+        "instructor": "Emily Walker",
+        "rating": 4.8,
+        "duration": "7 weeks",
+        "enrollment_fee": "$119",
+        "prerequisites": "Basic understanding of team dynamics",
+        "reviews": [
+            {"user": "Noah", "comment": "Great course for budding leaders!", "rating": 4.9},
+            {"user": "Isabella", "comment": "Practical insights into leadership.", "rating": 4.7}
+        ]
+    },
+    "Marketing_Strategy": {
+        "title": "Marketing Strategy",
+        "description": "Learn strategic marketing planning and execution.",
+        "instructor": "Sophia Evans",
+        "rating": 4.6,
+        "duration": "8 weeks",
+        "enrollment_fee": "$109",
+        "prerequisites": "Understanding of basic marketing concepts",
+        "reviews": [
+            {"user": "William", "comment": "Insightful course on marketing strategies!", "rating": 4.5},
+            {"user": "Charlotte", "comment": "Helped me understand market analysis better.", "rating": 4.7}
+        ]
+    },
+
+
+        "Photography": {
+            "1": "Basic Photography Techniques",
+            "2": "Portrait Photography",
+            "3": "Landscape Photography",
+            "4": "Photo Editing",
+            "5": "Lighting Fundamentals"
+        },
+
+         
+        "Basic Photography Techniques": {
+            "title": "Basic Photography Techniques",
+            "description": "Learn the fundamental techniques of photography including composition, exposure, and lighting.",
+            "instructor": "Sophia Lee",
+            "rating": 4.6,
+            "duration": "4 weeks",
+            "enrollment_fee": "$69",
+            "prerequisites": "No prerequisites required",
+            "reviews": [
+                {"user": "Eva", "comment": "Great starting point for beginners!", "rating": 4.5},
+                {"user": "Chris", "comment": "Helped me understand basic photography concepts.", "rating": 4.7}
+            ]
+        },
+        "Portrait Photography": {
+            "title": "Portrait Photography",
+            "description": "Master the art of capturing captivating portraits and understanding various lighting techniques.",
+            "instructor": "Michael Johnson",
+            "rating": 4.9,
+            "duration": "6 weeks",
+            "enrollment_fee": "$89",
+            "prerequisites": "Basic understanding of photography principles",
+            "reviews": [
+                {"user": "Sophie", "comment": "Instructor's expertise is invaluable!", "rating": 5.0},
+                {"user": "David", "comment": "Best course for portrait photography enthusiasts.", "rating": 4.8}
+            ]
+        },
+        "Landscape Photography": {
+            "title": "Landscape Photography",
+            "description": "Explore the techniques to capture stunning landscapes, from composition to post-processing.",
+            "instructor": "Emily Clark",
+            "rating": 4.7,
+            "duration": "8 weeks",
+            "enrollment_fee": "$99",
+            "prerequisites": "Basic knowledge of photography equipment",
+            "reviews": [
+                {"user": "Olivia", "comment": "Beautifully curated course on landscape photography!", "rating": 4.8},
+                {"user": "Jack", "comment": "Great tips for capturing landscapes.", "rating": 4.6}
+            ]
+        },
+        "Photo Editing": {
+            "title": "Photo Editing",
+            "description": "Learn photo editing techniques using industry-standard software for enhancement and manipulation.",
+            "instructor": "Daniel Miller",
+            "rating": 4.5,
+            "duration": "5 weeks",
+            "enrollment_fee": "$79",
+            "prerequisites": "Basic understanding of photo editing software",
+            "reviews": [
+                {"user": "Sophia", "comment": "Useful techniques for editing photos!", "rating": 4.6},
+                {"user": "Aiden", "comment": "Helped improve my editing skills.", "rating": 4.4}
+            ]
+        },
+        "Lighting Fundamentals": {
+            "title": "Lighting Fundamentals",
+            "description": "Master the understanding and use of light in photography for stunning and impactful images.",
+            "instructor": "Ava Taylor",
+            "rating": 4.8,
+            "duration": "4 weeks",
+            "enrollment_fee": "$69",
+            "prerequisites": "Basic understanding of photography",
+            "reviews": [
+                {"user": "Noah", "comment": "Essential course for understanding lighting!", "rating": 4.9},
+                {"user": "Mia", "comment": "Helped me improve my photography with proper lighting.", "rating": 4.7}
+            ]
+        }
+    
+    }
+}

@@ -39,7 +39,7 @@ public class AddUserViewModel {
                 isValidPhoneNumber = isValidPhoneNumber(user.getPhoneNumber());
             }
         }
-
+        
         CourseDataRepository.getInstance().addUser(user);
         this.addUser.onSuccess();
 

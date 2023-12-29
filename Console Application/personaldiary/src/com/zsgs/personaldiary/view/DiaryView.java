@@ -32,6 +32,7 @@ public class DiaryView {
                         System.out.println("Enter your diary entry");
                         String entryText = scanner.nextLine();
                         diaryViewModel.addEntry(entryText);
+                        diaryViewModel.saveEntriesToFile();
                         break;
                     case 2:
                         System.out.println("Your Diary Entries:");
@@ -43,7 +44,7 @@ public class DiaryView {
                         diaryViewModel.viewEntriesForDate(targetDate);
                         break;
                     case 4:
-                        diaryViewModel.saveEntriesToFile();
+             
                         exit = true;
                         System.out.println("Exiting the Personal Diary. Goodbye!");
                         break;

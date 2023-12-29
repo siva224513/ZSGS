@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="chatbot/chatbot/src"/>
+	<classpathentry kind="src" path="Console Application/chatbot/src"/>
+	<classpathentry kind="src" path="Console Application/dungeongame/src"/>
+	<classpathentry kind="src" path="Console Application/InterviewPanel/src"/>
+	<classpathentry kind="src" path="Console Application/personaldiary/src"/>
+	<classpathentry kind="src" path="Console Application/quizpro/src"/>
+	<classpathentry kind="src" path="Console Application/todolist/src"/>
+	<classpathentry kind="src" path="Evaluvation2/src"/>
+	<classpathentry kind="src" path="InterviewPanel/InterviewPanel/src"/>
+	<classpathentry kind="src" path="Java/Java/src"/>
+	<classpathentry kind="src" path="Test/Test/src"/>
+	<classpathentry kind="lib" path="chatbot/chatbot/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="output" path="Console Application/InterviewPanel/bin"/>
+</classpath>

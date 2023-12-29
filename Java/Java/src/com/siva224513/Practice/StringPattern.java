@@ -1,4 +1,4 @@
-package com.zsgs.personaldiary;
+package com.siva224513.Practice;
 
 import java.util.Scanner;
 

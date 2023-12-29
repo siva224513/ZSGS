@@ -16,7 +16,7 @@ public class AddUser {
         addUserViewModel = new AddUserViewModel(this);
     }
 
-    public void displayWelcomeMessage() throws ParseException {
+    public void displayWelcomeMessage()  {
         System.out.println(
                 "**************************************************************************************************************");
         System.out.println(
@@ -62,7 +62,7 @@ public class AddUser {
 
     }
 
-    public void signUp() throws ParseException {
+    public void signUp()  {
 
         System.out.println("Please enter your details to access our courses");
         System.out.println("Enter your name:");
@@ -71,7 +71,12 @@ public class AddUser {
         user.setEmail(scanner.next());
         System.out.println("Enter your phoneNumber");
         user.setPhoneNumber(scanner.next());
-        addUserViewModel.validate(user);
+        try {
+             addUserViewModel.validate(user);
+        } catch (Exception e) {
+            System.out.println("File not loaded");
+        }
+       
     }
 
     public void signIn() {

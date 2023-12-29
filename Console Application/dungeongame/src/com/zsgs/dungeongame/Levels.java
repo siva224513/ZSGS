@@ -70,9 +70,8 @@ public class Levels {
 
     public void level3(int row, int column, int adventurerPositionRow, int adventurerPositionColumn, int goldPostionRow,
             int goldPostionColumn, int monsterPositionRow, int monsterPositionColumn) {
-        int minPath = level2(row, column, adventurerPositionRow, adventurerPositionColumn, goldPostionRow,
-                goldPostionColumn, monsterPositionRow, monsterPositionColumn);
-        if (minPath != -1) {
+      
+       
             if (adventurerPositionColumn <= goldPostionColumn) {
                 while (adventurerPositionColumn < goldPostionColumn) {
                     System.out.println((adventurerPositionRow) + " " + (++adventurerPositionColumn));
@@ -92,29 +91,7 @@ public class Levels {
                     System.out.println((++adventurerPositionRow) + " " + (adventurerPositionColumn));
                 }
             }
-        } else {
-            System.out.println("No possible solution");
-        }
-
-    }
-
-    private int search(char[][] box, int i, int j, int row, int column, int k, char c) {
-        if (i >= row || i < 0 || j < 0 || j >= column || box[i][j] == '*' || (c != 'M' && box[i][j] == 'P'))
-            return Integer.MAX_VALUE;
-        if (box[i][j] == c) {
-            return k;
-        }
-        char temp = box[i][j];
-        box[i][j] = '*';
-
-        int up = search(box, i - 1, j, row, column, k + 1, c);
-        int down = search(box, i + 1, j, row, column, k + 1, c);
-        int left = search(box, i, j - 1, row, column, k + 1, c);
-        int right = search(box, i, j + 1, row, column, k + 1, c);
-        box[i][j] = temp;
-
-        int minPath = Math.min(Math.min(up, down), Math.min(left, right));
-        return minPath;
+       
 
     }
 
@@ -225,23 +202,19 @@ public class Levels {
         }
         if (adventurerMinPath <= monsterMinPath) {
             return adventurerMinPath;
-        } 
-        else{
+        } else {
             return -1;
         }
-        
 
     }
 
     public void level7(int row, int column, int adventurerPositionRow, int adventurerPositionColumn,
             int monsterPositionRow, int monsterPositionColumn, int triggerRow, int triggerColumn, int goldPostionRow,
-            int goldPostionColumn, ArrayList<int[]> list) {
+            int goldPostionColumn, ArrayList<int[]> newList) {
 
-              ArrayList<int[]> newList =list;
-        int minPath = level6(row, column, adventurerPositionRow, adventurerPositionColumn, monsterPositionRow,
-                monsterPositionColumn, goldPostionRow, goldPostionColumn, list);
-            
-        if (minPath == -1) {
+        
+
+        
             char box[][] = new char[row][column];
             for (char c[] : box) {
                 Arrays.fill(c, '0');
@@ -251,10 +224,10 @@ public class Levels {
             box[monsterPositionRow][monsterPositionColumn] = 'M';
             box[triggerRow][triggerColumn] = 'T';
             for (int a[] : newList) {
-              //  System.out.println(Arrays.toString(a));
+                // System.out.println(Arrays.toString(a));
                 int i = a[0];
                 int j = a[1];
-               // System.out.println(i+" "+j);
+                // System.out.println(i+" "+j);
                 box[i][j] = 'P';
 
             }
@@ -277,11 +250,33 @@ public class Levels {
                     }
                 }
             }
+            if(adventurerMinPath==Integer.MAX_VALUE){
+                System.out.println("No possible solution");
+            }
+            else{
             System.out.println("Minimum number of steps: " + (adventurerMinPath + triggerMinPath));
+            }
+        
+    }
+
+    private int search(char[][] box, int i, int j, int row, int column, int k, char c) {
+        if (i >= row || i < 0 || j < 0 || j >= column || box[i][j] == '*' || (c != 'M' && box[i][j] == 'P'))
+            return Integer.MAX_VALUE;
+        if (box[i][j] == c) {
+            return k;
         }
-        else{
-            System.out.println("Minimum number of steps :"+minPath);
-        }
+        char temp = box[i][j];
+        box[i][j] = '*';
+
+        int up = search(box, i - 1, j, row, column, k + 1, c);
+        int down = search(box, i + 1, j, row, column, k + 1, c);
+        int left = search(box, i, j - 1, row, column, k + 1, c);
+        int right = search(box, i, j + 1, row, column, k + 1, c);
+        box[i][j] = temp;
+
+        int minPath = Math.min(Math.min(up, down), Math.min(left, right));
+        return minPath;
+
     }
 
 }
