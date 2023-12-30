@@ -24,8 +24,9 @@ public class RoleHierarchyView {
     public void start(RoleNode root) {
         boolean exit = false;
         while (!exit) {
-            System.out.println("enter your choice:");
+            
             System.out.println("1. Add Sub Role\n2. Display Roles\n3.Delete Roles\n0.Exit");
+            System.out.println("enter your choice:");
             try {
 
                 int value = scanner.nextInt();
@@ -35,14 +36,23 @@ public class RoleHierarchyView {
                         System.out.println("operation to be performed:" + value);
                         System.out.println("Enter sub role name: ");
                         String subRoleName = scanner.nextLine();
+                        System.out.println("Enter reporting to role name:");
+                        String reportingRoleName = scanner.nextLine();
                         if (subRoleName.equalsIgnoreCase("COO") || subRoleName.equalsIgnoreCase("CTO"))
                             roleHierarchyViewModel.addSubRole(root, subRoleName);
                         else
-                           roleHierarchyViewModel.addSubRole(subRoleName,root);
+                            roleHierarchyViewModel.addSubRole(subRoleName, root,reportingRoleName);
                         break;
                     case 2:
                         System.out.println("operation to be performed:" + value);
                         roleHierarchyViewModel.displayRoles(root);
+                        break;
+                    case 3:
+                        System.out.println("operation to be performed:" + value);
+                        System.out.println("Enter the role to be deleted: ");
+                        String deletedRoleName = scanner.nextLine();
+                        
+
                         break;
                     case 0:
                         System.out.println("Exiting..");
@@ -70,8 +80,9 @@ public class RoleHierarchyView {
 
     // }
 
-    public void addSubRoleOnSuccess(RoleNode root) {
-        System.out.println("Enter reporting to role name :" + root.getData());
+    public void addSubRoleOnSuccess() {
+        System.out.println("Role Added successfully..");
     }
 
 }
+
