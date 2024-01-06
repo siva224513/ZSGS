@@ -1,4 +1,3 @@
-package com.siva224513.Practice;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -21,8 +20,8 @@ public class CombinationString {
 
     private void getCombination(String curr, String input, ArrayList<String> list) {
         if (input.length() == 0) {
-            if(curr.length()!=0)
-            list.add(curr);
+            if (curr.length() != 0)
+                list.add(curr);
             return;
         }
         getCombination(curr + input.charAt(0), input.substring(1), list);

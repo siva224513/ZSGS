@@ -1,4 +1,3 @@
-package com.siva224513.Practice;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -29,5 +28,7 @@ public class RemoveDuplicatesFromList {
             }
         }
         System.out.println(result);
+        System.out.println();
+        
     }
 }

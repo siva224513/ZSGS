@@ -54,4 +54,7 @@ public class DiaryRepository {
           
         }
     }
+    public void editEntriesInFile(){
+       
+    }
 }

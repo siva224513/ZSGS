@@ -93,7 +93,7 @@ public class CourseDataRepository {
                 String name = (String) userDetailsObject.get("name");
                 String phoneNumber = (String) userDetailsObject.get("phoneNumber");
 
-                // Create UserDetails object
+               
                 UserDetails user = new UserDetails();
                 user.setName(name);
                 user.setEmail(userEmail);

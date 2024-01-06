@@ -1,4 +1,4 @@
-package com.siva224513.Practice;
+
 
 import java.util.HashMap;
 import java.util.Scanner;

@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="chatbot/chatbot/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="Console Application/chatbot/src"/>
 	<classpathentry kind="src" path="Console Application/dungeongame/src"/>
 	<classpathentry kind="src" path="Console Application/InterviewPanel/src"/>
 	<classpathentry kind="src" path="Console Application/personaldiary/src"/>
 	<classpathentry kind="src" path="Console Application/quizpro/src"/>
+	<classpathentry kind="src" path="Console Application/role_hierarchy/src"/>
 	<classpathentry kind="src" path="Console Application/todolist/src"/>
 	<classpathentry kind="src" path="Evaluvation2/src"/>
 	<classpathentry kind="src" path="InterviewPanel/InterviewPanel/src"/>
-	<classpathentry kind="src" path="Java/Java/src"/>
+	<classpathentry excluding="com/siva224513/Practice/|com/siva224513/Practice/02-01-24/" kind="src" path="Java/Java/src"/>
+	<classpathentry excluding="02-01-24/" kind="src" path="Java/Java/src/com/siva224513/Practice"/>
+	<classpathentry kind="src" path="Java/Java/src/com/siva224513/Practice/02-01-24"/>
 	<classpathentry kind="src" path="Test/Test/src"/>
-	<classpathentry kind="lib" path="chatbot/chatbot/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="G:/json-simple-1.1.1.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="Console Application/InterviewPanel/bin"/>
 </classpath>

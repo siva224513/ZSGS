@@ -7,6 +7,6 @@ public class Diary {
 
         DiaryView d = new DiaryView();
         d.writeDiary();
-        //  add editing option , imp - encrp, 
+       
     } 
 }

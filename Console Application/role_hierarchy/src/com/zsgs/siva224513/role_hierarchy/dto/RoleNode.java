@@ -3,8 +3,8 @@ package com.zsgs.siva224513.role_hierarchy.dto;
 import java.util.ArrayList;
 
 public class RoleNode {
-   private String data;
-   private ArrayList<RoleNode> child = new ArrayList<>();
+    private String data;
+    private ArrayList<RoleNode> child = new ArrayList<>();
 
     public String getData() {
         return data;
