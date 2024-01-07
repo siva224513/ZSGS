@@ -34,7 +34,14 @@ public class DiaryView {
                     case 1:
                         System.out.println("Enter your diary entry");
                         String entryText = scanner.nextLine();
-                        diaryViewModel.addEntry(entryText);
+                        System.out.println("Do you want to encrypt your entry? (Y/N)");
+                        String encryptChoice = scanner.nextLine();
+                        if (encryptChoice.equalsIgnoreCase("Y")) {
+                            String encryptedEntry = diaryViewModel.encryptEntry(entryText);
+                            diaryViewModel.addEntry(encryptedEntry,true);
+                        } else {
+                            diaryViewModel.addEntry(entryText,false);
+                        }
                         diaryViewModel.saveEntriesToFile();
                         break;
                     case 2:

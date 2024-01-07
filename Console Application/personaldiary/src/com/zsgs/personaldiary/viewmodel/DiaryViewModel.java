@@ -16,7 +16,7 @@ public class DiaryViewModel {
         DiaryRepository.getInstance().loadEntriesFromFile();
     }
 
-    public void addEntry(String entryText) {
+    public void addEntry(String entryText,boolean isEncrpted) {
         LocalDateTime currDateTime = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String formatterTime = currDateTime.format(formatter);
@@ -92,6 +92,22 @@ public class DiaryViewModel {
             System.out.println("Invalid entry number.");
         }
 
+    }
+
+    public String encryptEntry(String entryText) {
+
+        StringBuilder encryptedText = new StringBuilder();
+
+        for (char character : entryText.toCharArray()) {
+            if (Character.isLetter(character)) {
+                char encryptedChar = (char) (((character - 'a' + 3) % 26) + 'a');
+                encryptedText.append(encryptedChar);
+            } else {
+                encryptedText.append(character);
+            }
+        }
+
+        return encryptedText.toString();
     }
 
 }
