@@ -2,5 +2,6 @@
 22-12-2023 14:40:56 - today is done 4 console projects
 22-12-2023 14:42:39 - A checked exception is caught at compile time whereas a runtime or unchecked exception is, as it states, at runtime. A checked exception must be handled either by re-throwing or with a try catch block, whereas an unchecked isn't required to be handled.
 27-12-2023 14:53:56 - today is not a special day
-08-01-2024 14:19:53 - Today is monday
+08-01-2024 14:19:53 - Today is very happy day
 15-01-2024 11:14:37 - Wrgdb lv srqjdo
+16-01-2024 14:46:12 - wrgdb lv yhub vshfldo gdb
