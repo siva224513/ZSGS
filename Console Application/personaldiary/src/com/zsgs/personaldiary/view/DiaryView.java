@@ -44,7 +44,7 @@ public class DiaryView {
                         }
                         diaryViewModel.saveEntriesToFile();
                         break;
-                    case 2:
+                    case 2: 
                         System.out.println("Your Diary Entries:");
                         diaryViewModel.viewEntries();
                         break;
